@@ -5,56 +5,54 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Gabinete do Polímata · Guilherme Gonçalves Machado</title>
 <meta name="description" content="The Script of All and Everything · Ecossistema intelectual autoral · Rio de Janeiro">
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-body{background:#0f0d0a;color:#e8e0d0;font-family:'Palatino Linotype','Book Antiqua',Palatino,serif;display:flex;flex-direction:column;min-height:100vh}
+<style>*{margin:0;padding:0;box-sizing:border-box}
+body{background:#f5f0e8;color:#1a1208;font-family:'Palatino Linotype','Book Antiqua',Palatino,serif;display:flex;flex-direction:column;min-height:100vh}
 ::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-thumb{background:#3a3020;border-radius:2px}
-header{border-bottom:1px solid #2a2418;padding:32px 40px 26px;background:linear-gradient(180deg,#0d0b07,#0f0d0a)}
-.orcid{font-size:11px;letter-spacing:6px;color:#a09060;margin-bottom:10px;text-transform:uppercase}
-h1{font-size:clamp(24px,3vw,38px);font-weight:normal;color:#e8c060;letter-spacing:3px;margin:0 0 10px;text-transform:uppercase}
-.moto{font-size:14px;color:#c0b090;font-style:italic;max-width:700px;line-height:1.8;margin:0 0 16px}
-.epigraph{font-size:13px;color:#d0b060;margin-bottom:16px;font-style:italic}
+::-webkit-scrollbar-thumb{background:#c8b890;border-radius:2px}
+header{border-bottom:2px solid #d4c49a;padding:32px 40px 26px;background:linear-gradient(180deg,#ede8d8,#f5f0e8)}
+.orcid{font-size:11px;letter-spacing:6px;color:#8b6914;margin-bottom:10px;text-transform:uppercase}
+h1{font-size:clamp(24px,3vw,38px);font-weight:normal;color:#5a3c08;letter-spacing:3px;margin:0 0 10px;text-transform:uppercase}
+.moto{font-size:14px;color:#3a2a10;font-style:italic;max-width:700px;line-height:1.8;margin:0 0 16px}
+.epigraph{font-size:13px;color:#8b6914;margin-bottom:16px;font-style:italic;font-weight:bold}
 .badges{display:flex;gap:10px;flex-wrap:wrap}
-.badge{font-size:10px;letter-spacing:3px;color:#a09060;border:1px solid #2a2418;padding:4px 12px;text-transform:uppercase}
+.badge{font-size:10px;letter-spacing:3px;color:#8b6914;border:1px solid #c8a850;padding:4px 12px;text-transform:uppercase;background:#ede8d8}
 .layout{display:flex;flex:1}
 main{flex:1;padding:28px 36px;overflow-y:auto}
 .tier{margin-bottom:36px}
-.tier-lbl{font-size:11px;letter-spacing:5px;color:#8a7850;text-transform:uppercase;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid #2a2418}
+.tier-lbl{font-size:11px;letter-spacing:5px;color:#8b6914;text-transform:uppercase;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #d4c49a}
 .nodes{display:flex;flex-wrap:wrap;gap:10px}
 .node{background:transparent;border-radius:3px;padding:13px 17px;cursor:pointer;text-align:left;outline:none;font-family:inherit;transition:all .15s;position:relative}
 .node.wide{padding:22px 32px;min-width:260px}
 .n-top{display:flex;align-items:baseline;gap:7px;margin-bottom:5px}
-.n-glyph{font-size:17px;opacity:.8;line-height:1}
+.n-glyph{font-size:17px;opacity:.9;line-height:1}
 .n-label{font-size:12px;font-weight:bold;letter-spacing:2px;text-transform:uppercase}
-.n-sub{font-size:11px;font-style:italic;line-height:1.4;opacity:.75}
+.n-sub{font-size:11px;font-style:italic;line-height:1.4;color:#5a4a28}
 .pulsering{position:absolute;inset:-1px;border-radius:3px;pointer-events:none;animation:bp 2s ease-in-out infinite}
-@keyframes bp{0%,100%{opacity:.25}50%{opacity:.85}}
-aside{width:380px;border-left:1px solid #2a2418;background:#0d0b08;overflow-y:auto;flex-shrink:0}
+@keyframes bp{0%,100%{opacity:.3}50%{opacity:.9}}
+aside{width:380px;border-left:2px solid #d4c49a;background:#ede8d8;overflow-y:auto;flex-shrink:0}
 .panel{padding:30px 26px}
-.p-tag{font-size:11px;letter-spacing:4px;color:#8a7850;text-transform:uppercase;margin-bottom:18px}
-.p-glyph{font-size:34px;opacity:.85;margin-bottom:6px}
+.p-tag{font-size:11px;letter-spacing:4px;color:#8b6914;text-transform:uppercase;margin-bottom:18px}
+.p-glyph{font-size:34px;opacity:.9;margin-bottom:6px}
 .p-label{font-size:15px;font-weight:bold;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px;line-height:1.2}
-.p-sub{font-size:12px;font-style:italic;margin-bottom:16px;color:#c0b090}
-.p-line{height:1px;margin-bottom:16px}
-.p-desc{font-size:14px;color:#c8bea8;line-height:1.9}
-.conn-t{font-size:11px;letter-spacing:4px;color:#8a7850;text-transform:uppercase;margin:24px 0 10px}
-.conn-btn{display:flex;align-items:center;gap:8px;width:100%;padding:9px 11px;margin-bottom:4px;border-radius:3px;cursor:pointer;text-align:left;outline:none;font-family:inherit;transition:background .12s}
-.conn-g{font-size:16px;opacity:.7;flex-shrink:0}
-.conn-l{font-size:11px;letter-spacing:1.5px;text-transform:uppercase}
-.conn-s{font-size:10px;font-style:italic;margin-top:2px;opacity:.65}
-.clear-btn{margin-top:18px;width:100%;padding:9px;border:1px solid #2a2418;background:transparent;color:#8a7850;font-size:11px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;border-radius:3px;outline:none;font-family:inherit}
+.p-sub{font-size:12px;font-style:italic;margin-bottom:16px;color:#5a4a28}
+.p-line{height:2px;margin-bottom:16px}
+.p-desc{font-size:14px;color:#1a1208;line-height:1.9}
+.conn-t{font-size:11px;letter-spacing:4px;color:#8b6914;text-transform:uppercase;margin:24px 0 10px}
+.conn-btn{display:flex;align-items:center;gap:8px;width:100%;padding:9px 11px;margin-bottom:4px;border-radius:3px;cursor:pointer;text-align:left;outline:none;font-family:inherit;transition:background .12s;background:#f5f0e8;border:1px solid #d4c49a}
+.conn-g{font-size:16px;opacity:.8;flex-shrink:0}
+.conn-l{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#1a1208}
+.conn-s{font-size:10px;font-style:italic;margin-top:2px;color:#5a4a28}
+.clear-btn{margin-top:18px;width:100%;padding:9px;border:1px solid #c8a850;background:#f5f0e8;color:#8b6914;font-size:11px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;border-radius:3px;outline:none;font-family:inherit}
 .leg-item{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0}
-.leg-txt{font-size:13px;color:#c0b090}
-.leg-s{font-size:11px;color:#a09060;font-style:italic}
-.hint{margin-top:22px;padding:14px;border:1px solid #2a2418;border-radius:3px;font-size:12px;color:#8a7850;line-height:1.75;font-style:italic}
-.edge-sec{margin-top:40px;padding-top:20px;border-top:1px solid #2a2418}
-.edge-t{font-size:11px;letter-spacing:5px;color:#8a7850;text-transform:uppercase;margin-bottom:12px}
+.leg-txt{font-size:13px;color:#1a1208}
+.leg-s{font-size:11px;color:#5a4a28;font-style:italic}
+.hint{margin-top:22px;padding:14px;border:1px solid #d4c49a;border-radius:3px;font-size:12px;color:#5a4a28;line-height:1.75;font-style:italic;background:#f5f0e8}
+.edge-sec{margin-top:40px;padding-top:20px;border-top:2px solid #d4c49a}
+.edge-t{font-size:11px;letter-spacing:5px;color:#8b6914;text-transform:uppercase;margin-bottom:12px}
 .edge-list{display:flex;flex-wrap:wrap;column-gap:16px;row-gap:3px}
-.edge-item{font-size:10px;color:#4a4030;font-family:monospace}
-.edge-arr{color:#8a7850}
-</style>
+.edge-item{font-size:10px;color:#8b6914;font-family:monospace}
+.edge-arr{color:#5a3c08}</style>
 </head>
 <body>
 <header>
@@ -108,7 +106,7 @@ function renderMain(){
       var a=n.accent;
       var bg=isAct?'linear-gradient(135deg,'+dimColor(a)+','+a+'18)':isC?dimColor(a):'transparent';
       var bd=isAct?a:isC?a+'55':isD?'#1e1a1210':a+'28';
-      var op=isD?'0.12':'1';
+      var op=isD?'0.15':'1';
       var shadow=isAct?'0 0 20px '+a+'18':'none';
       var wide=id==='motoPerpetuo'?' wide':'';
       html+='<button class="node'+wide+'" data-id="'+id+'" style="background:'+bg+';border:1px solid '+bd+';opacity:'+op+';box-shadow:'+shadow+';color:'+a+'">';
