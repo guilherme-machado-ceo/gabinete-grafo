@@ -1,204 +1,69 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gabinete do Polímata · Guilherme Gonçalves Machado</title>
-<meta name="description" content="The Script of All and Everything · Ecossistema intelectual autoral · Rio de Janeiro">
-<style>*{margin:0;padding:0;box-sizing:border-box}
-body{background:#f5f0e8;color:#1a1208;font-family:'Palatino Linotype','Book Antiqua',Palatino,serif;display:flex;flex-direction:column;min-height:100vh}
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-thumb{background:#c8b890;border-radius:2px}
-header{border-bottom:2px solid #b8a070;padding:32px 40px 26px;background:#ede8d8}
-.orcid{font-size:14px;letter-spacing:6px;color:#5a3c08;margin-bottom:10px;text-transform:uppercase}
-h1{font-size:clamp(27px,3vw,41px);font-weight:normal;color:#3a2008;letter-spacing:3px;margin:0 0 10px;text-transform:uppercase}
-.moto{font-size:17px;color:#1a1208;font-style:italic;max-width:700px;line-height:1.8;margin:0 0 16px}
-.epigraph{font-size:16px;color:#5a3c08;margin-bottom:16px;font-style:italic;font-weight:bold}
-.badges{display:flex;gap:10px;flex-wrap:wrap}
-.badge{font-size:13px;letter-spacing:3px;color:#3a2008;border:2px solid #8b6914;padding:5px 13px;text-transform:uppercase;background:#e8e0c8;font-weight:bold}
-.layout{display:flex;flex:1}
-main{flex:1;padding:28px 36px;overflow-y:auto}
-.tier{margin-bottom:36px}
-.tier-lbl{font-size:14px;letter-spacing:5px;color:#3a2008;text-transform:uppercase;margin-bottom:14px;padding-bottom:8px;border-bottom:2px solid #b8a070;font-weight:bold}
-.nodes{display:flex;flex-wrap:wrap;gap:10px}
-.node{background:#e8e0c8;border:2px solid #b8a070;border-radius:4px;padding:13px 17px;cursor:pointer;text-align:left;outline:none;font-family:inherit;transition:all .15s;position:relative}
-.node.wide{padding:22px 32px;min-width:260px}
-.n-top{display:flex;align-items:baseline;gap:7px;margin-bottom:5px}
-.n-glyph{font-size:20px;line-height:1;color:#3a2008}
-.n-label{font-size:15px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;color:#1a1208}
-.n-sub{font-size:13px;font-style:italic;line-height:1.4;color:#3a2008}
-.pulsering{position:absolute;inset:-2px;border-radius:4px;pointer-events:none;animation:bp 2s ease-in-out infinite}
-@keyframes bp{0%,100%{opacity:.4}50%{opacity:1}}
-aside{width:400px;border-left:2px solid #b8a070;background:#e8e0c8;overflow-y:auto;flex-shrink:0}
-.panel{padding:30px 26px}
-.p-tag{font-size:13px;letter-spacing:4px;color:#3a2008;text-transform:uppercase;margin-bottom:18px;font-weight:bold}
-.p-glyph{font-size:36px;margin-bottom:6px;color:#3a2008}
-.p-label{font-size:18px;font-weight:bold;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px;line-height:1.2;color:#1a1208}
-.p-sub{font-size:14px;font-style:italic;margin-bottom:16px;color:#3a2008}
-.p-line{height:2px;margin-bottom:16px;background:#b8a070}
-.p-desc{font-size:15px;color:#1a1208;line-height:1.9}
-.conn-t{font-size:13px;letter-spacing:4px;color:#3a2008;text-transform:uppercase;margin:24px 0 10px;font-weight:bold}
-.conn-btn{display:flex;align-items:center;gap:8px;width:100%;padding:9px 11px;margin-bottom:6px;border-radius:4px;cursor:pointer;text-align:left;outline:none;font-family:inherit;transition:background .12s;background:#f5f0e8;border:2px solid #b8a070}
-.conn-btn:hover{background:#ddd8c0}
-.conn-g{font-size:18px;flex-shrink:0;color:#3a2008}
-.conn-l{font-size:13px;letter-spacing:1px;text-transform:uppercase;color:#1a1208;font-weight:bold}
-.conn-s{font-size:11px;font-style:italic;margin-top:2px;color:#3a2008}
-.clear-btn{margin-top:18px;width:100%;padding:10px;border:2px solid #8b6914;background:#f5f0e8;color:#3a2008;font-size:13px;letter-spacing:3px;text-transform:uppercase;cursor:pointer;border-radius:4px;outline:none;font-family:inherit;font-weight:bold}
-.leg-item{display:flex;align-items:center;gap:10px;margin-bottom:12px}
-.leg-dot{width:12px;height:12px;border-radius:2px;flex-shrink:0;border:1px solid #00000030}
-.leg-txt{font-size:14px;color:#1a1208;font-weight:bold}
-.leg-s{font-size:12px;color:#3a2008;font-style:italic}
-.hint{margin-top:22px;padding:14px;border:2px solid #b8a070;border-radius:4px;font-size:13px;color:#1a1208;line-height:1.75;font-style:italic;background:#f5f0e8}
-.edge-sec{margin-top:40px;padding-top:20px;border-top:2px solid #b8a070}
-.edge-t{font-size:13px;letter-spacing:5px;color:#3a2008;text-transform:uppercase;margin-bottom:12px;font-weight:bold}
-.edge-list{display:flex;flex-wrap:wrap;column-gap:16px;row-gap:3px}
-.edge-item{font-size:12px;color:#5a3c08;font-family:monospace}
-.edge-arr{color:#1a1208;font-weight:bold}</style>
-</head>
-<body>
-<header>
-  <div class="orcid">Guilherme Gonçalves Machado · Rio de Janeiro · ORCID 0009-0008-1083-0784</div>
-  <h1>Gabinete do Polímata</h1>
-  <div class="epigraph">"Computar é, antes de tudo, interpretar." · The Script of All and Everything</div>
-  <p class="moto">Inflexão do pensamento humano incidindo sobre o conjunto universo dos fenômenos, em interseção com stacks tecnológicas tanto analógicas quanto digitais, instanciando-se em paralelo ou série em múltiplas áreas do conhecimento como na tradição pancrônica dos polimatas, em comparação e contraste sistemáticos operada pela analogia — heurística, funcional ou homologia —, em um fluxo contínuo de pesquisa, estudo, criação, ensino e produção econômica.</p>
-  <div class="badges">
-    <span class="badge">Polyograph</span>
-    <span class="badge">Zenodo</span>
-    <span class="badge">Instituto PCIHᶟ</span>
-    <span class="badge">GitHub · marcabru-tech</span>
-  </div>
-</header>
-<div class="layout">
-<main id="main"></main>
-<aside id="aside"></aside>
-</div>
-<script>
-var NODES={einSofAur:{label:"EIN SOF AUR",glyph:"★",sub:"The Script of All and Everything · documento fundante",desc:"Documento mais antigo do ecossistema. Paradigma epistemológico que: (1) converge conhecimentos de todas as áreas; (2) processa dados em 7000+ línguas; (3) interface via sensores mecatrônicos — os 5 sentidos da máquina; (4) integra todas as linguagens. IDE como cérebro ciborgue. GENEALOGIA: Ein Sof → Beit Or Ein Sof · Script of All → Semiografia/Poligrafia/Teografia · IDE → codeiOgraph · sensores → stack analógica-digital · convergência → Segunda Escola de Toledo · música → Morfologia Harmônica/HPG 1.0.",accent:"#d4af37"},deepHub:{label:"DEEP HUB PAPER",glyph:"◎",sub:"4 campos, raízes semíticas, 7 níveis · versão zero da GuruDev",desc:"Segundo documento mais antigo. Formula os 4 campos do conhecimento (Filosofias, Tradições Espirituais, Ciências, Artes), raízes semânticas, 7 níveis de interpretação, 3 relações de concordância. GENEALOGIA: 4 campos → 5 instâncias do IMIP · raízes semíticas → Morfologia Harmônica · 7 níveis → GuruDev/TTM · 3 relações → 6 relações da Semiografia · Deep Hub → Hubstry Deep Tech.",accent:"#b8860b"},motoPerpetuo:{label:"MOTO PERPÉTUO",glyph:"∞",sub:"Princípio autoral gerador",desc:"Inflexão do pensamento humano incidindo sobre o conjunto universo dos fenômenos, em interseção com stacks tecnológicas tanto analógicas quanto digitais, instanciando-se em paralelo ou série em múltiplas áreas do conhecimento como na tradição pancrônica dos polimatas, em comparação e contraste sistemáticos operada pela analogia — heurística, funcional ou homologia —, em um fluxo contínuo de pesquisa, estudo, criação, ensino e produção econômica.",accent:"#c9a84c"},reineSprache:{label:"REINE SPRACHE",glyph:"λ",sub:"Basso ostinato universal · Benjamin",desc:"A linguagem da natureza — física e metafísica — da qual toda escrita humana é tradução. Princípio transversal que sustenta Naturaglia, Hierourgia e Poligrafia como variações sobre um ostinato comum.",accent:"#9b7a1a"},imip:{label:"IMIP",glyph:"Ψ",sub:"Instância Múltipla Integrada do Pensamento",desc:"O sujeito cognitivo opera em cinco instâncias: científica (→Semiografia) · artística (→Marcabrü Aiara) · espiritual universalista — modo Ramakrishna (→Teografia) · filosófica (→Naturaglia) · empreendedora — start-up mode como ignição, não dogma (→Hubstry). Heterônimos como artefatos cognitivos externos (Clark) e protocolo endógeno de risco psicossocial (Dejours/NR-1). Agenciamento maquínico (Deleuze & Guattari). Corpus: seis publicações Zenodo.",accent:"#4a9e6e"},beitOr:{label:"BEIT OR EIN SOF",glyph:"✦",sub:"בֵּית אוֹר אֵין סוֹף · دَارُ نُورِ الأَزَل",desc:"Meta-projeto civilizacional conduzido por Ezra ben Sefarad (tradição hebraico-sefardita/cabalística) e Ra'uf ibn Hadi al-Andalusí (tradição árabe-islâmica/Ikhwan al-Safa). Locus: Toledo. Produz: Poligrafia · Segunda Escola de Toledo · Sprachlehre · Léxico Poligráfico · Genealogia Gerativa.",accent:"#7070dd"},semiografia:{label:"SEMIOGRAFIA",glyph:"σ",sub:"Método geral · DOI 10.5281/zenodo.18802603",desc:"VERSÃO I (fev/2026): Gesto dual de inventário pancrônico e prospecção. Valência teórica. Axioma: do dual à polivalência. VERSÃO II (abr/2026, 441p): Sistema axiomático sobre matrizes n-dimensionais. 7 axiomas. Operador Ψ = formalização matemática do Moto Perpétuo. Axioma Ziette: signo 7-Z. Powered by Lexiograph.",accent:"#c87040"},morfossemiografia:{label:"MORFOSSEMIOGRAFIA",glyph:"μ",sub:"O Morfema Afixal como Operador Epistemológico · DOI 10.5281/zenodo.19184886",desc:"Primeiro desdobramento da Semiografia. Morfema afixal como operador epistemológico. Cinco limiares de cristalização: territorial · memorial · ritual · identitário · institucional. Protocolo de 5 passos. Bachelard (obstáculo epistemológico), Greenberg/Comrie (universal relativo), Milton Santos (técnica como território). Framework computacional em 3 camadas.",accent:"#c87040"},poligrafia:{label:"POLIGRAFIA",glyph:"П",sub:"Gênero da escrita autoral",desc:"Literatura multilíngue e simultânea em múltiplas camadas de materialidade. Opera por interseção (teoria dos conjuntos), ritornello (D&G) e translação interepistêmica. Output do Beit Or Ein Sof. O que a escrita É — enquanto a Semiografia designa como ela opera.",accent:"#7070dd"},segundaEscola:{label:"SEGUNDA ESCOLA DE TOLEDO",glyph:"⚖",sub:"Arquitetura institucional · 10 cadeiras civilizacionais",desc:"Direito · Guerra · História · Filosofia · Artes & Ofícios · Ciências · Gramática & Ciências da Linguagem · Comércio & Economia · Tradições Espirituais/Teografia · Educação & Formação. Organiza o conhecimento como campo integrado na tradição pancrônica dos polímatas.",accent:"#7070dd"},sprachlehre:{label:"SPRACHLEHRE → TTM",glyph:"∂",sub:"Doutrina da Língua · DOI 10.5281/zenodo.19056387",desc:"Teoria Tridimensional do Morfema: largura (combinatório-derivacional) · profundidade (hermenêutico-semântico) · altura gráfica (suprassegmental-escritural). Corpus: árabe, hebraico, sânscrito, mandarim, russo, tupi. Hermenêuticas: PaRDeS, Quadriga, Ẓāhir/Bāṭin, Saptavidha.",accent:"#7070dd"},naturaglia:{label:"NATURAGLIA",glyph:"Ω",sub:"Horizonte ontológico + Projeto filosófico IMIP · DOI 10.5281/zenodo.18888646",desc:"Papel duplo: (1) horizonte ontológico — cinco Naturabilia como condição de possibilidade de qualquer pesquisa; (2) instância filosófica do IMIP. Cinco disciplinas reunificadas: ciência natural · filosofia natural · história natural · direito natural · teologia natural. Forma: passacaglia. Genealogia: Fílon · Ikhwan al-Safa · Maimônides · Tomás · Jung · Morin.",accent:"#3a9a5a"},grammath:{label:"GRAMMATH",glyph:"Γ",sub:"Universal Grammar of Experience · framework transmodal",desc:"Gramática universal da experiência: organiza fenômenos tal como comparecem aos sentidos humanos, sensores de máquinas, intuição, razão, imaginação e processos computacionais. Universalidade aristotélica. Papel duplo: (1) fundamento epistemológico; (2) projeto científico do IMIP. Naturaglia fornece a ontologia; Grammath fornece a epistemologia operacional.",accent:"#5a9ab0"},hpg:{label:"HPG 1.0",glyph:"≋",sub:"Harmonic Protocol Grid · DOI 10.5281/zenodo.18652888",desc:"Framework de comunicação multicanal para sistemas embarcados baseado em subdivisões racionais irredutíveis de f₀. Omnigrid Harmônico 2D com 97 canais únicos (totiente de Euler, N=16). Harmonic Security Layer (HSL). Convergência: música das esferas (Naturaglia) ↔ stack analógica-digital (Arduino, embarcados, Hubstry).",accent:"#3a9a5a"},teografia:{label:"TEOGRAFIA",glyph:"θ",sub:"Campo: literaturas espirituais · esboço 8/jan/2026",desc:"Iniciativa epistemológica de pesquisa, estudo, criação e ensino das literaturas espirituais da humanidade — escritas, orais, rituais e performativas. Universalismo crítico: nenhuma tradição é centro ou exceção. Equivalência oral/escrito. Nona cadeira da Segunda Escola de Toledo.",accent:"#a060c0"},hierourgia:{label:"HIEROURGIA",glyph:"ℌ",sub:"Primeira obra teográfica sistemática",desc:"ἱερός + ἔργον — a obra que faz a obra sagrada: descreve e produz o logos operativo sacro simultaneamente. Seis valências: teurgia · demiurgia · taumaturgia · dramaturgia · magia natural · magia cerimonial. Corpora: PGM, Picatrix, Jâmblico, Agrippa, patrística, homilética. Inclui corpus de sermões, jaculatórias e litanias.",accent:"#a060c0"},marcabru:{label:"MARCABRÜ AIARA",glyph:"✒",sub:"Heterônimo artístico-literário · desde 2017",desc:"Identidade artístico-literária exclusiva: dramaturgia hospitalar (Platéias Hospitalares/Doutores da Alegria 2014-16) · poesia · música original · teoria musical · IA em música. Indústria criativa — sexta maior indústria mundial. Rio de Janeiro como locus territorial. Protocolo NR-1. Distinto do Instituto PCIHᶟ.",accent:"#cc5050"},grauZero:{label:"GRAU ZERO / INSTÂNCIA MÍNIMA TRIPLA",glyph:"⌀",sub:"Semiótica do manuscrito · DOIs .18652564 / .19431553",desc:"Grau Zero do Traço: manuscrito em estado liminar anterior a qualquer codificação — modo autônomo de produção semiótica (Peirce, Barthes, Morin). Instância Mínima Tripla: um único gesto cursivo instancia ⟨2⟩, ⟨l⟩ e ⟨h⟩ — polissemia constitutiva emergente. Extensão C-DDTF criptográfica.",accent:"#cc5050"},gurudev:{label:"GURUDEV®",glyph:"⌘",sub:"Ontolinguagem · github.com/marcabru-tech · Hubstry/Lexiograph",desc:"Computar é, antes de tudo, interpretar. ONTOLINGUAGEM: co-institui mundos computáveis — não representa o ser, é estrutura do ser computável. PROCESSADOR SEMÂNTICO TRIDIMENSIONAL: pensamento analógico × semiose peirceana × hermenêutica N1–N7. 6 relações semânticas. DISPATCH_ON_HERMENEUTICS. GURUMATRIX[i][j][k][t][l] 5D. CASOS GRAMATICAIS OPCIONAIS (Progressive Semantic Disclosure): VOC/NOM/ACU/DAT/GEN/INS/LOC/ABL. Sistema de versões GuruDev.v(Alpha/Alef/Alif...). MVP: 25 testes, GuruDVM, CLI. Validações: GitHub Education, Microsoft for Startups, Google Gemini, Santander Explorer, Artemisia.",accent:"#cc5050"},morfHarmonica:{label:"MORFOLOGIA HARMÔNICA",glyph:"♫",sub:"Campo fundado 22/jan/2026 · Manifesto v1.0 Zenodo",desc:"Campo cujo objeto é a estrutura morfológica universal em domínios distintos: linguístico, musical, geométrico, mineral, vegetal e animal. Quatro fontes: morfologia semítica (raiz trilítera/quadrilítera) · teoria harmônica (tríades/tétrades) · 23 definições de Euclides · morfometria geométrica. 13 postulados com critérios de falseabilidade. Triadicidade como propriedade estrutural do real. Avô: D'Arcy Thompson (1917).",accent:"#e8a030"},codeiOgraph:{label:"codeiOgraph",glyph:"⎈",sub:"Plataforma de hermenêutica computacional",desc:"O código-fonte é texto semiótico-normativo que objetiva pensamento analógico. Interpretar código é reconstruir o pensamento — Savigny: Rekonstruktion des im Gesetz enthaltenen Gedankens. AGI é antes de tudo um problema hermenêutico. Quatro camadas: (1) Grid semiótico do código; (2) Motor de analogia transdomínio; (3) Savigny Engine; (4) Grafo de pensamento. Ambiente nativo do GuruDev.",accent:"#50a0d0"},vvvGrid:{label:"GRID VERBI–VOCO–VISUAL",glyph:"β",sub:"Semiose tridimensional da língua natural",desc:"Axioma: L = ⟨verbi, voco, visual⟩. Três dimensões coorigininárias: verbi (logos, inteligibilidade) · voco (corporeidade, embodied cognition) · visual (espacialização, escrita). Valor zero estrutural (∅). Isomorfismo com TTM e com processador semântico do GuruDev.",accent:"#a080d0"},inoffshore:{label:"IN||OFF SHORE",glyph:"‖",sub:"Plataforma de exploração de dados · produto Hubstry",desc:"Plataforma análoga à exploração de petróleo offshore. O operador || vem do OR lógico de JavaScript: In (onshore, superficial) || Off (offshore, profundo). Analogia: sísmica ↔ scraping · perfuração ↔ extração estruturada · refino ↔ ETL · petroquímica ↔ features de ML. Ressona com o Axioma GuruDev: Φ_ctx (In) || Φ_comp (Off), acoplados por Ψ.",accent:"#2060a0"},solomon:{label:"SOLOMON BUSINESS",glyph:"◆",sub:"Startup · reposicionamento digital de heritage",desc:"Missão: (re)posicionar negócios locais e tradicionais no mundo digital e contemporâneo, preservando com rigor e reverência seus valores fundadores e seus propósitos originais, para que suas trajetórias se perpetuem em prosperidade e sirvam de inspiração às novas e às futuras gerações. Morfossemiografia aplicada a negócios.",accent:"#906020"},almanaque:{label:"ALMANAQUE GURUDEV",glyph:"⊙",sub:"Formato editorial · Polyograph Press",desc:"Inspirado nos almanaques do início do séc. XX. SISTEMA DE VERSÕES GuruDev.v(Nicho, Estágio): Alpha (EdTech) · Alef/א (Cybersecurity) · Alif/ا (IA Geral) · Âmbar/Azul/Amaranto (Games). DODECÁLOGO: 12 campos de formação integral. Gabinete do Polímata = versão digital viva do Almanaque.",accent:"#c0a030"},lexicoPoligrafico:{label:"LÉXICO POLIGRÁFICO",glyph:"Λ",sub:"Neologismos constitutivos · Polyograph Press",desc:"Verbetes produzidos: (1) ONTOLINGUAGEM — linguagem de programação cuja arquitetura co-institui mundos computáveis. GuruDev® é sua primeira instância. (2) HIEROURGIA — ἱερός + ἔργον — a obra que faz a obra sagrada. (3) ZIETTE — signo 7-Z: último grafema iterado 7x por sobreposição semiótica (Axioma Ziette, Semiografia v.0). DOI Zenodo previsto para v1.0.",accent:"#d4af37"},lexiograph:{label:"LEXIOGRAPH",glyph:"Λ",sub:"Startup pré-seed · faixa formal-computacional",desc:"Startup pré-seed fundada em 2023. Entidade da faixa formal-computacional — distinta da Hubstry (business tech), Instituto PCIHᶟ (ICT público) e Agência Laos (design/IoT). Abriga: Semiografia v.0 · codeiOgraph · GuruDev® · Grammath. Lexiograph Deep Design.",accent:"#70a070"},institutoPCIH:{label:"INSTITUTO PCIHᶟ",glyph:"◈",sub:"Polymath Cyborg Intelligence Hub · braço ICT",desc:"Vocação ICT/pública para acesso a financiamento institucional e pesquisa. Interface do ecossistema com o sistema nacional de CT&I. Cláusula ética inegociável: sem licenciamento para armas autônomas de IA ou vigilância de cidadãos.",accent:"#4080b0"},hubstry:{label:"HUBSTRY · TRADEFLOW · ECOSSISTEMA",glyph:"⚙",sub:"Produção econômica · fundado 2023",desc:"Hubstry Deep Tech (2023): CaaS em Rust para ECA Digital (Lei 15.211/2025), Fly.io GRU. TradeFlow: automação de comércio exterior. Agência Laos: design + IoT. Alessa Machado em Negócios: marketing. Oficina de Labareda/Ogum. Indústrias Alvarenga. Produção econômica como dimensão constitutiva do moto perpétuo.",accent:"#4080b0"},om3:{label:"OM³",glyph:"✕",sub:"Ordem Mundial Mercante Multimodal",desc:"Empresa global de serviços estratégicos. Missão: comércio como instituição civilizatória. Modais: marítimo, fluvial, rodoviário, ferroviário e aéreo. Estrutura hierárquica inspirada nas Ordens medievais. Cadeira 8 da Segunda Escola de Toledo: Comércio & Economia.",accent:"#b8860b"},urgias:{label:"AS SEIS VALÊNCIAS",glyph:"⬡",sub:"Hexágono operativo da Hierourgia",desc:"Teurgia (θεός+ἔργον) · Demiurgia (δήμιος+ἔργον) · Taumaturgia (θαῦμα+ἔργον) · Dramaturgia (δράμα+ἔργον) · Magia Natural (simpatias ocultas, Ficino/Porta) · Magia Cerimonial (PGM, Picatrix, Clavicula). Invariante pancrônico: a enunciação eficaz.",accent:"#a060c0"},axioma:{label:"AXIOMA DA GURUDEV",glyph:"Ψ",sub:"Princípio fundacional · dualidade infinito contextual / computacional",desc:"⟦ℓ⟧ = Ψ(Φ_ctx, Φ_comp). Linha mínima ℓ = expressão atômica com efeito observável não decomponível sem perda de intenção. Isomórfica com ponto euclidiano (aquilo de que nada é parte) e jaculatória (ato de fala eficaz mínimo) — três instâncias de U(D) em três domínios. Oito espaços ε: euclidiano · Hilbert · Fourier (HPG) · métrico · Sobolev · Minkowski · fractal · curvas elípticas. AGI = problema de acoplamento entre Φ_ctx e Φ_comp.",accent:"#d060a0"},vvvServices:{label:"VVV MICROSERVICES",glyph:"β",sub:"Três microserviços em Go · um por dimensão do grid",desc:"Implementação do Grid Verbi–Voco–Visual em Go: verbi-service (NLP/semântica) · voco-service (áudio/prosódia) · visual-service (imagem/OCR/gesto). Gateway: codeiOgraph. Runtime: GuruDev®. Infra: Fly.io GRU.",accent:"#a080d0"}};
+   AMBIENT PARTICLE SYSTEM — golden dust
+   ═══════════════════════════════════════════════════════ */
+(function(){
+  var canvas=document.getElementById('ambientCanvas');
+  var ctx=canvas.getContext('2d');
+  var particles=[];
+  var PARTICLE_COUNT=45;
 
-var EDGES=[["einSofAur","deepHub"],["einSofAur","motoPerpetuo"],["einSofAur","beitOr"],["einSofAur","codeiOgraph"],["einSofAur","segundaEscola"],["einSofAur","morfHarmonica"],["einSofAur","semiografia"],["deepHub","motoPerpetuo"],["deepHub","imip"],["deepHub","gurudev"],["deepHub","morfHarmonica"],["deepHub","semiografia"],["deepHub","hubstry"],["motoPerpetuo","reineSprache"],["motoPerpetuo","imip"],["motoPerpetuo","beitOr"],["motoPerpetuo","semiografia"],["motoPerpetuo","naturaglia"],["motoPerpetuo","teografia"],["motoPerpetuo","marcabru"],["motoPerpetuo","institutoPCIH"],["motoPerpetuo","hubstry"],["motoPerpetuo","lexiograph"],["motoPerpetuo","grammath"],["reineSprache","naturaglia"],["reineSprache","hierourgia"],["reineSprache","poligrafia"],["imip","naturaglia"],["imip","grammath"],["imip","marcabru"],["imip","gurudev"],["imip","beitOr"],["beitOr","poligrafia"],["beitOr","segundaEscola"],["beitOr","sprachlehre"],["beitOr","almanaque"],["beitOr","solomon"],["beitOr","lexicoPoligrafico"],["semiografia","morfossemiografia"],["semiografia","grauZero"],["semiografia","gurudev"],["semiografia","axioma"],["semiografia","vvvGrid"],["semiografia","lexicoPoligrafico"],["semiografia","grammath"],["naturaglia","hpg"],["naturaglia","hierourgia"],["naturaglia","gurudev"],["naturaglia","grammath"],["grammath","codeiOgraph"],["grammath","vvvGrid"],["grammath","axioma"],["grammath","inoffshore"],["segundaEscola","teografia"],["segundaEscola","solomon"],["segundaEscola","almanaque"],["segundaEscola","om3"],["sprachlehre","morfHarmonica"],["sprachlehre","vvvGrid"],["morfossemiografia","hierourgia"],["morfossemiografia","codeiOgraph"],["morfossemiografia","solomon"],["morfossemiografia","almanaque"],["morfossemiografia","lexicoPoligrafico"],["teografia","hierourgia"],["teografia","gurudev"],["hierourgia","urgias"],["hierourgia","axioma"],["marcabru","grauZero"],["marcabru","gurudev"],["gurudev","morfHarmonica"],["gurudev","codeiOgraph"],["gurudev","axioma"],["gurudev","vvvGrid"],["gurudev","almanaque"],["gurudev","institutoPCIH"],["gurudev","lexicoPoligrafico"],["morfHarmonica","axioma"],["morfHarmonica","grammath"],["hpg","morfHarmonica"],["hubstry","hpg"],["hubstry","inoffshore"],["hubstry","solomon"],["hubstry","codeiOgraph"],["hubstry","axioma"],["hubstry","vvvServices"],["hubstry","om3"],["lexiograph","semiografia"],["lexiograph","gurudev"],["lexiograph","codeiOgraph"],["lexiograph","grammath"],["lexiograph","almanaque"],["lexiograph","lexicoPoligrafico"],["lexiograph","inoffshore"],["institutoPCIH","hubstry"],["vvvGrid","vvvServices"],["vvvGrid","codeiOgraph"],["lexicoPoligrafico","almanaque"],["axioma","inoffshore"]];
-
-var TIERS=[{label:"GÊNESE · DOCUMENTOS FUNDANTES",ids:["einSofAur","deepHub"]},{label:"PRINCÍPIO GERADOR",ids:["motoPerpetuo"]},{label:"FUNDAMENTOS",ids:["reineSprache","imip","beitOr"]},{label:"MÉTODOS · CAMPOS · HETERÔNIMOS · INSTITUIÇÕES",ids:["semiografia","poligrafia","segundaEscola","naturaglia","grammath","teografia","marcabru","lexiograph","institutoPCIH","hubstry","om3"]},{label:"FERRAMENTAS · OBRAS · PROJETOS",ids:["morfossemiografia","sprachlehre","hpg","hierourgia","grauZero","gurudev","morfHarmonica","codeiOgraph","vvvGrid","inoffshore","solomon","almanaque","lexicoPoligrafico"]},{label:"OBJETO DA OBRA MAIOR",ids:["urgias"]},{label:"PRINCÍPIO FUNDACIONAL COMPUTACIONAL",ids:["axioma"]},{label:"IMPLEMENTAÇÕES",ids:["vvvServices"]}];
-
-var LEGEND=[["#d4af37","Gênese · documentos fundantes","Ein Sof Aur / Deep Hub"],["#c9a84c","Princípio gerador","Moto Perpétuo"],["#9b7a1a","Basso ostinato","Reine Sprache"],["#4a9e6e","Teoria do sujeito","IMIP"],["#7070dd","Projeto civilizacional","Beit Or Ein Sof"],["#c87040","Método / ferramenta","Semiografia et al."],["#3a9a5a","Horizonte ontológico","Naturaglia"],["#a060c0","Campo teográfico","Teografia / Hierourgia"],["#cc5050","Heterônimo / criação","Marcabrü Aiara"],["#4080b0","Institucional / econômico","PCIHᶟ / Hubstry"]];
-
-var active=null;
-
-function isConn(id){return active&&EDGES.some(function(e){return(e[0]===active&&e[1]===id)||(e[1]===active&&e[0]===id)});}
-function isDim(id){return active&&id!==active&&!isConn(id);}
-function connIds(){return EDGES.filter(function(e){return e[0]===active||e[1]===active;}).map(function(e){return e[0]===active?e[1]:e[0];});}
-
-function render(){
-  renderMain();
-  renderAside();
-}
-
-function renderMain(){
-  var html='';
-  TIERS.forEach(function(tier,ti){
-    html+='<div class="tier">';
-    html+='<div class="tier-lbl">'+tier.label+'</div>';
-    html+='<div class="nodes" style="justify-content:'+(tier.ids.length===1?'center':'flex-start')+'">';
-    tier.ids.forEach(function(id){
-      var n=NODES[id];
-      if(!n)return;
-      var isAct=active===id;
-      var isC=isConn(id);
-      var isD=isDim(id);
-      var a=n.accent;
-      var bg=isAct?a+'22':isC?a+'18':'#e8e0c8';
-      var bd=isAct?'2px solid '+a:isC?'2px solid '+a+'88':'2px solid #b8a070';
-      var op=isD?'0.35':'1';
-      var shadow=isAct?'0 0 0 2px '+a:'none';
-      var bdStyle=bd;
-      var wide=id==='motoPerpetuo'?' wide':'';
-      html+='<button class="node'+wide+'" data-id="'+id+'" style="background:'+bg+';border:'+bd+';opacity:'+op+';box-shadow:'+shadow+';color:'+a+'">';
-      if(isC&&!isAct)html+='<span class="pulsering" style="border:1px solid '+a+'"></span>';
-      html+='<div class="n-top"><span class="n-glyph" style="color:#3a2008">'+n.glyph+'</span><span class="n-label" style="color:#1a1208">'+n.label+'</span></div>';
-      html+='<div class="n-sub" style="color:#3a2008">'+n.sub+'</div>';
-      html+='</button>';
-    });
-    html+='</div></div>';
-  });
-  html+='<div class="edge-sec"><div class="edge-t">▸ Mapa de relações estruturais</div><div class="edge-list">';
-  EDGES.forEach(function(e){
-    var a=NODES[e[0]]?NODES[e[0]].label.split(' ')[0]:'?';
-    var b=NODES[e[1]]?NODES[e[1]].label.split(' ')[0]:'?';
-    html+='<span class="edge-item">'+a+' <span class="edge-arr">→</span> '+b+'</span>';
-  });
-  html+='</div></div>';
-  document.getElementById('main').innerHTML=html;
-  document.querySelectorAll('.node').forEach(function(btn){
-    btn.addEventListener('click',function(){
-      var id=this.getAttribute('data-id');
-      active=active===id?null:id;
-      render();
-    });
-    btn.addEventListener('mouseenter',function(){
-      if(!active){
-        var id=this.getAttribute('data-id');
-        renderAside(id);
-      }
-    });
-    btn.addEventListener('mouseleave',function(){
-      if(!active)renderAside(null);
-    });
-  });
-}
-
-function renderAside(hov){
-  var cur=active||(hov||null);
-  var n=cur?NODES[cur]:null;
-  if(n){
-    var a=n.accent;
-    var html='<div class="panel">';
-    html+='<div class="p-tag">'+(active?'Nó ativo':'Prévia')+'</div>';
-    html+='<div class="p-glyph" style="color:'+a+'">'+n.glyph+'</div>';
-    html+='<div class="p-label" style="color:#1a1208">'+n.label+'</div>';
-    html+='<div class="p-sub" style="color:#3a2008">'+n.sub+'</div>';
-    html+='<div class="p-line" style="background:linear-gradient(90deg,'+a+'40,transparent)"></div>';
-    html+='<div class="p-desc">'+n.desc+'</div>';
-    if(active){
-      var cids=connIds();
-      if(cids.length){
-        html+='<div class="conn-t">Conectado a</div>';
-        cids.forEach(function(cid){
-          var o=NODES[cid];
-          if(!o)return;
-          var isOut=EDGES.some(function(e){return e[0]===active&&e[1]===cid;});
-          html+='<button class="conn-btn" data-id="'+cid+'" style="border:1px solid '+o.accent+'22;background:'+o.accent+'08">';
-          html+='<span class="conn-g" style="color:'+o.accent+'">'+o.glyph+'</span>';
-          html+='<div><div class="conn-l" style="color:'+o.accent+'">'+(isOut?'→':'←')+' '+o.label+'</div>';
-          html+='<div class="conn-s">'+o.sub.split('·')[0].trim()+'</div></div>';
-          html+='</button>';
-        });
-      }
-      html+='<button class="clear-btn">Limpar seleção ×</button>';
-    }
-    html+='</div>';
-    document.getElementById('aside').innerHTML=html;
-    document.querySelectorAll('.conn-btn').forEach(function(btn){
-      btn.addEventListener('click',function(){
-        active=this.getAttribute('data-id');
-        render();
-      });
-    });
-    var clr=document.querySelector('.clear-btn');
-    if(clr)clr.addEventListener('click',function(){active=null;render();});
-  } else {
-    var html='<div class="panel">';
-    html+='<div class="p-tag">Legenda</div>';
-    LEGEND.forEach(function(l){
-      html+='<div class="leg-item"><div class="leg-dot" style="background:'+l[0]+'"></div><div><div class="leg-txt">'+l[1]+'</div><div class="leg-s">'+l[2]+'</div></div></div>';
-    });
-    html+='<div class="hint">Clique em qualquer nó para expandir sua descrição e visualizar conexões no ecossistema.</div></div>';
-    document.getElementById('aside').innerHTML=html;
+  function resize(){
+    canvas.width=window.innerWidth;
+    canvas.height=window.innerHeight;
   }
-}
+  resize();
+  window.addEventListener('resize',resize);
 
-function dimColor(hex){
-  return hex+'18';
-}
+  function Particle(){
+    this.reset();
+  }
+  Particle.prototype.reset=function(){
+    this.x=Math.random()*canvas.width;
+    this.y=Math.random()*canvas.height;
+    this.size=Math.random()*2+0.5;
+    this.speedX=(Math.random()-0.5)*0.3;
+    this.speedY=(Math.random()-0.5)*0.3 - 0.1;
+    this.opacity=Math.random()*0.5+0.1;
+    this.life=Math.random()*400+200;
+    this.maxLife=this.life;
+    this.hue=40+Math.random()*15; // gold range
+  };
+  Particle.prototype.update=function(){
+    this.x+=this.speedX;
+    this.y+=this.speedY;
+    this.life--;
+    if(this.life<=0||this.x<0||this.x>canvas.width||this.y<0||this.y>canvas.height){
+      this.reset();
+    }
+  };
+  Particle.prototype.draw=function(){
+    var fade=Math.min(1,this.life/(this.maxLife*0.2),(this.maxLife-this.life)/(this.maxLife*0.2));
+    ctx.beginPath();
+    ctx.arc(this.x,this.y,this.size,0,Math.PI*2);
+    ctx.fillStyle='rgba(212,175,55,'+(this.opacity*fade)+')';
+    ctx.fill();
+    // soft glow
+    ctx.beginPath();
+    ctx.arc(this.x,this.y,this.size*3,0,Math.PI*2);
+    ctx.fillStyle='rgba(212,175,55,'+(this.opacity*fade*0.15)+')';
+    ctx.fill();
+  };
 
+  for(var i=0;i<PARTICLE_COUNT;i++){
+    particles.push(new Particle());
+  }
+
+  function animate(){
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    particles.forEach(function(p){p.update();p.draw();});
+    requestAnimationFrame(animate);
+  }
+  animate();
+})();
+
+/* ═══════════════════════════════════════════════════════
+   INIT
+   ═══════════════════════════════════════════════════════ */
 window.addEventListener('load',function(){render();});
 </script>
 </body>
